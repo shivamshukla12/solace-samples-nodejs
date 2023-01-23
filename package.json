@@ -4,6 +4,7 @@
     "description": "Simple sample applications to quickly demonstrate basic capabilities of the Solace node.js API",
     "license": "Apache-2.0",
     "dependencies": {
+        "@sap/hana-client": "^2.14.23",
         "solclientjs": "^10.0.0"
     },
     "repository": {

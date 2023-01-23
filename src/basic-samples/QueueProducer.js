@@ -109,7 +109,7 @@ var QueueProducer = function (solaceModule, queueName) {
     // Sends one message
     producer.sendMessage = function () {
         if (producer.session !== null) {
-            var messageText = 'Sample Message';
+            var messageText = 'This is coming from CAP';
             var message = solace.SolclientFactory.createMessage();
             producer.log('Sending message "' + messageText + '" to queue "' + producer.queueName + '"...');
             message.setDestination(solace.SolclientFactory.createDurableQueueDestination(producer.queueName));
@@ -163,7 +163,7 @@ solace.SolclientFactory.init(factoryProps);
 solace.SolclientFactory.setLogLevel(solace.LogLevel.WARN);
 
 // create the producer, specifying the name of the destination queue
-var producer = new QueueProducer(solace, 'tutorial/queue');
+var producer = new QueueProducer(solace, 'FEDEX_TRACKING');
 
 // send message to Solace message router
 producer.run(process.argv);
